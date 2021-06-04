@@ -355,6 +355,12 @@ body {
   transition: 0.5s;
 }
 
+.dish__text {
+  color: #C7AA81;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .big-btn {
     display: none;

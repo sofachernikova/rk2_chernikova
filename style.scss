@@ -316,6 +316,13 @@ body {
         background: $milky;
         transition: 0.5s;
     } 
+
+    &__text {
+        color: $milky;
+        margin-bottom: 15px;
+        text-align: center;
+        
+    }
 }
 
 .big-btn {
