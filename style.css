@@ -75,8 +75,9 @@
 .main_text {
   font-family: Georgia;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: center;
 }
 
 body {
@@ -166,7 +167,7 @@ body {
   margin-top: 50px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   .header__content {
     margin-top: 40px;
   }
@@ -218,7 +219,7 @@ body {
   padding-top: 10px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   .navbar {
     display: none;
   }
@@ -248,7 +249,7 @@ body {
   color: #000000;
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1200px) {
   .navbar2 {
     display: none;
   }
@@ -522,5 +523,34 @@ body {
 
 .list__section {
   width: 90%;
+}
+
+.footer {
+  min-height: 125px;
+  background-color: #FCBF49;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__content {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */
