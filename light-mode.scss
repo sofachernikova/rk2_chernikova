@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+// Цвета
+
+$sea: #9FD6B5;
+$yellow: #126944;
+$red: #F44336;
+$orange: #024C64;
+$black: #FFFFFF;
+$milky: #3B2A68;

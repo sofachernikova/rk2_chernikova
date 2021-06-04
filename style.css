@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.h1 {
+  font-family: 'Playfair Display SC';
+  font-weight: 1500;
+  font-size: 40px;
+  line-height: 53px;
+}
+
+.h2 {
+  font-family: 'Playfair Display SC';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.h3 {
+  font-family: 'Playfair Display SC';
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.menu_items {
+  font-family: 'Playfair Display SC';
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.subtitle {
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.main_text {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+body {
+  background-color: #003049;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
