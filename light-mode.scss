@@ -21,9 +21,487 @@
 
 // Цвета
 
-$sea: #9FD6B5;
+$sea: #BED2BD;
 $yellow: #126944;
 $red: #F44336;
 $orange: #024C64;
 $black: #FFFFFF;
 $milky: #3B2A68;
+
+// Типографика
+
+.h1 {
+    font-family: 'Playfair Display SC';
+    font-weight: 1500;
+    font-size: 40px;
+    line-height: 53px;
+}
+
+.h2 {
+    font-family: 'Playfair Display SC';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.h3 {
+    font-family: 'Playfair Display SC';
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.menu_items {
+    font-family: 'Playfair Display SC';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.subtitle {
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.subtitle2 {
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.main_text {
+    font-family: Georgia;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+}
+
+// Основные стили
+
+body {
+    background-color: $sea;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.header {
+    background-image: url("img/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 800px;
+
+    @media (max-width: 600px) {
+        background-image: none;
+        background-color: $yellow;
+    }
+
+    &__section {
+        width: 90%;
+        position: relative;
+
+        @media (max-width: 550px) {
+            width: 100%;
+        }
+    }
+    
+    &__flag {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        fill: $yellow;
+
+        @media (max-width: 550px) {
+            display: none;
+        }
+    }
+
+    &__flag2 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        fill: $yellow;
+
+        @media (min-width: 550px) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        padding-top: 3px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__logo {
+        z-index: 1;
+        margin: auto;
+    }
+
+    &__content {
+        margin: auto;
+        color: $black;
+        max-width: 430px;
+        text-align: center;
+        margin-top: 50px;
+
+        @media (max-width: 1200px) {
+            margin-top: 40px;
+        }
+    }
+
+    &__title {
+        color: $black;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        color: $yellow;
+        background-color: $black;
+        margin: auto;
+        margin-bottom: 15px;
+        border: none;
+    }
+
+    &__button:hover {
+        background-color: $sea;
+        transition: 0.5s;
+    }
+}
+
+.sqareButton {
+    width: 300px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    z-index: 1;
+    padding-top: 10px;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
+
+    &__item {
+        color: $milky;
+        text-decoration: none;
+        padding-bottom: 5px;
+    }
+
+    &__item:hover {
+        border-bottom: 0.5px solid $milky;
+    }
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    width: 301px;
+    z-index: 1;
+    padding-top: 10px;
+    margin: auto;
+    color: $black;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+
+    &__item {
+        color: $black;
+        text-decoration: none;
+        padding-bottom: 5px;
+        z-index: 1;
+    }
+
+    &__item:hover {
+        border-bottom: 0.5px solid $black;
+    }
+}
+
+// Категории
+
+.kategory {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &__section {
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    &__title {
+        color: $milky;
+        text-align: center;
+    }
+
+    &__block {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 870px) {
+            justify-content: space-around;
+        }
+    }
+}
+
+.dish {
+    width: 370px;
+    min-height: 429px;
+    border: 3px solid $milky;
+    box-sizing: border-box;
+    padding: 35px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+            width: 260px;
+            min-height: 350px;
+    }
+
+    &__image {
+        max-width: 300px;
+        max-height: 225px;
+        margin-bottom: 30px;
+
+        @media (max-width: 600px) {
+            width: 100%;   
+            // min-height: 350px;
+        }
+    }
+
+    &__title {
+        color: $milky;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__button {
+        background: $orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $sea;
+
+    }
+
+    &__button:hover {
+        background: $milky;
+        transition: 0.5s;
+    } 
+
+    &__text {
+        color: $milky;
+        margin-bottom: 15px;
+        text-align: center;
+
+    }
+}
+
+.big-btn {
+    @media (max-width: 600px) {
+                display: none;
+            }
+}
+
+.mini-btn {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    @media (min-width: 600px) {
+                display: none;
+            }
+}
+
+// Стили полей ввода и формы
+
+:root {
+  --main: $sea;
+  --white: $milky;
+}
+
+#app{
+  font-family: 'Gilroy', sans-serif;
+  color: $milky;
+  max-width: 1150px;
+  
+}
+
+.stats {
+    margin: 0px;
+
+    &__title {
+        padding: 10px;
+        background-color: $milky;
+        color: $black;
+        font-weight: 500;
+    }
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 100%;
+    border: 2px solid $milky;
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &__done {
+        height: 30px;
+        border: none;
+        background-color: unset;
+    }
+}
+
+.task:hover {
+    background-color: rgba(255, 255, 255, 0.089);
+}
+
+.add_task {
+  display: flex;
+  margin-top: 20px;
+  
+}
+.add_task__input {
+  width: 80%;
+  @media (max-width: 530px) {
+             width: 98%;
+        }
+}
+.add_task__input input, textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 5px 0 5px 5px;
+  font-family: 'Gilroy',sans-serif;
+  border: 2px solid $milky;
+  color: $milky;
+  background-color: transparent;
+}
+.add_task__input input {
+  margin-bottom: 5px;
+}
+.add_task__btn {
+  width: 20%;
+  border: none;
+  margin-left: 20px;
+  background-color: $milky;
+  color: $black;
+
+  @media (max-width: 530px) {
+            display: none;
+        }
+}
+.add_task__btn:hover {
+  cursor: pointer;
+  background-color: #2f485811;
+  background-color: $yellow;
+}
+
+.add_task__btn2 {
+  width: 103%;
+  border: none;
+  background-color: $milky;
+  margin-top: 2px;
+  color: $black;
+  height: 55px;
+
+  @media (min-width: 530px) {
+            display: none;
+        }
+}
+.add_task__btn:hover {
+  cursor: pointer;
+  background-color: #2f485811;
+  background-color: $yellow;
+}
+
+.list {
+    &__section {
+        width: 90%;
+    }
+}
+
+.footer {
+    min-height: 125px;
+    background-color: $yellow;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    &__content {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        color: $black;
+    }
+
+}
+
+// Анимация средствами CSS
+
+.rot {
+    animation: 1s linear 0s normal none infinite running rot;
+  -webkit-animation: 1s linear 0s normal none infinite running rot;
+  width: 100px;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
