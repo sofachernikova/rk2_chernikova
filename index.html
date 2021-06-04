@@ -9,10 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Recepty</title>
 </head>
+
 <body>
 
     <!-- ШАПКА -->
-    
+
     <header class="header">
         <article class="header__section wrapper">
             <h2 class="visually-hidden">Меню сайта</h2>
@@ -28,8 +29,8 @@
             </svg>
             <div class="header__menu">
                 <div class="navbar">
-                    <a href="#katedory" class="navbar__item menu_items">Категории</a>
-                    <a href="mylist" class="navbar__item menu_items">Мой список</a>
+                    <a href="#kategory" class="navbar__item menu_items">Категории</a>
+                    <a href="#list" class="navbar__item menu_items">Мой список</a>
                 </div>
                 <img srcset="img/logo.svg 1x" alt="логотип" class="header__logo">
                 <div class="navbar">
@@ -57,11 +58,11 @@
     </header>
 
     <!-- ОСНОВНАЯ ЧАСТЬ -->
-    
+
     <main>
-    
+
         <!-- КАТЕГОРИИ -->
-    
+
         <section class="kategory" id="kategory">
             <h2 class="h2 kategory__title">Категории рецептов</h2>
             <article class="kategory__section wrapper">
@@ -70,28 +71,63 @@
                     <div class="kategory__dish dish">
                         <img class="dish__image" src="img/Categories/1.png" alt="блюдо">
                         <h3 class="dish__title h3">Пасты</h3>
-                        <a href="" class="dish__button sqareButton">
+                        <a href="" class="dish__button sqareButton  big-btn">
                             <p class="subtitle">Перейти к категории</p>
+                        </a>
+                        <a href="" class="dish__button  mini-btn">
+                            <p class="subtitle2">Перейти к категории</p>
                         </a>
                     </div>
                     <div class="kategory__dish dish">
                         <img class="dish__image" src="img/Categories/2.png" alt="блюдо">
                         <h3 class="dish__title h3">Десерты</h3>
-                        <a href="" class="dish__button sqareButton">
+                        <a href="" class="dish__button sqareButton  big-btn">
                             <p class="subtitle">Перейти к категории</p>
+                        </a>
+                        <a href="" class="dish__button  mini-btn">
+                            <p class="subtitle2">Перейти к категории</p>
                         </a>
                     </div>
                     <div class="kategory__dish dish">
                         <img class="dish__image" src="img/Categories/3.png" alt="блюдо">
                         <h3 class="dish__title h3">Пицца</h3>
-                        <a href="" class="dish__button sqareButton">
+                        <a href="" class="dish__button sqareButton  big-btn">
                             <p class="subtitle">Перейти к категории</p>
+                        </a>
+                        <a href="" class="dish__button  mini-btn">
+                            <p class="subtitle2">Перейти к категории</p>
                         </a>
                     </div>
                 </div>
             </article>
+
+            <article class="list__section wrapper" id="list">
+                <h2 class="visually-hidden h2">Список</h2>
+                <h2 style="margin-bottom: 35px; margin-top: 20px;" class="h2 kategory__title">Мой список</h2>
+                <div id="app">
+                    <div class="stats">
+                        <h3 class="stats__title">{{"Любимых рецептов: "+ tasks.length}}</h3>
+                    </div>
+                    <task @task_done="delete_task(index)" :key="index" v-for="(data,index) in tasks" :data="data">
+                    </task>
+                    <div class="add_task">
+                        <div class="add_task__input ">
+                            <input style="min-height: 30px;" placeholder="Введите название рецепта" type="text"
+                                v-model="new_task.title">
+                            <textarea placeholder="Введите описание" type="text" v-model="new_task.desc"></textarea>
+                            <button class="add_task__btn2 subtitle" @click="add_task">Добавить рецепт</button>
+                        </div>
+                        <button class="add_task__btn subtitle" @click="add_task">Добавить рецепт</button>
+                    </div>
+                </div>
+                </div>
+            </article>
+
         </section>
+
+
 
 </body>
 <script src="script.js"></script>
+
 </html>
